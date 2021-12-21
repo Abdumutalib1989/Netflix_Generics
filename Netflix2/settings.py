@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Netflix2.urls'
@@ -133,10 +133,5 @@ STATIC_ROOT = 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-try:
-    from .production_settings import *
-    MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware',)
-except ImportError:
-    pass
 
 django_heroku.settings(locals())
