@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.test import TestCase, Client
-from models import Actor, Movie
+from .models import Actor, Movie
 from serializers import ActorSerializer, CommentSerializer, MovieSerializer
 
 class TestMovieList(TestCase):
