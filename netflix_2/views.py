@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.test import TestCase, Client
 from .models import Actor, Movie
-from serializers import ActorSerializer, CommentSerializer, MovieSerializer
+from .serializers import ActorSerializer, CommentSerializer, MovieSerializer
 
 class TestMovieList(TestCase):
     def setUp(self) -> None:
